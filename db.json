@@ -1,0 +1,29 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Learn React",
+      "status": "done"
+    },
+    {
+      "id": "2",
+      "title": "Learn GraphQL",
+      "status": "done"
+    },
+    {
+      "id": "3",
+      "title": "Learn Apollo",
+      "status": "done"
+    },
+    {
+      "id": "4",
+      "title": "Learn TypeScript",
+      "status": "done"
+    },
+    {
+      "id": "5",
+      "title": "Learn Node.js",
+      "status": "done"
+    }
+  ]
+}
