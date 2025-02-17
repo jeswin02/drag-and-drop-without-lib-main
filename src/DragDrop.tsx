@@ -3,95 +3,107 @@ import { DndProvider, useDrag, useDrop } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
 interface Provider {
-  name: string;
+  type: string;
+  count: number;
   isCancelled: boolean;
+  _id: string;
 }
 
-interface AuthorizedProvider {
-  name: string;
+interface AssignedProvider {
+  providerId: string;
+  providerName: string;
+  providerType: string;
+  _id: string;
+  providerDetails: {
+    providerType: string;
+    [key: string]: any;
+  };
 }
 
 interface Appointment {
-  setTime: string;
+  _id: string;
+  facilityId: string;
   facilityName: string;
-  providers: Provider[];
-  authorizedProviders: AuthorizedProvider[];
+  scheduledDateTime: string;
+  noOfProvidersRequired: Provider[];
+  assignedProviders: AssignedProvider[];
+  address: string;
 }
 
-const initialAppointments: Appointment[] = [
-  {
-    setTime: "2025-02-20T10:30:00Z",
-    facilityName: "Fortis",
-    providers: [
-      { name: "CRN", isCancelled: true },
-      { name: "Neuro", isCancelled: false },
-    ],
-    authorizedProviders: [{ name: "Neuro" }],
-  },
-  {
-    setTime: "2025-02-20T10:30:00Z",
-    facilityName: "Fortis",
-    providers: [
-      { name: "Cardiology", isCancelled: false },
-      { name: "Orthopedics", isCancelled: true },
-    ],
-    authorizedProviders: [{ name: "Cardiology" }],
-  },
-  {
-    setTime: "2025-02-21T14:00:00Z",
-    facilityName: "Apollo",
-    providers: [
-      { name: "Dermatology", isCancelled: false },
-      { name: "ENT", isCancelled: false },
-    ],
-    authorizedProviders: [{ name: "Dermatology" }, { name: "ENT" }],
-  },
-  {
-    setTime: "2025-02-22T09:00:00Z",
-    facilityName: "Max Healthcare",
-    providers: [
-      { name: "Gastroenterology", isCancelled: false },
-      { name: "Nephrology", isCancelled: true },
-    ],
-    authorizedProviders: [{ name: "Gastroenterology" }],
-  },
-  {
-    setTime: "2025-02-22T09:00:00Z",
-    facilityName: "Max Healthcare",
-    providers: [
-      { name: "Oncology", isCancelled: false },
-      { name: "Urology", isCancelled: false },
-    ],
-    authorizedProviders: [{ name: "Oncology" }, { name: "Urology" }],
-  },
-  {
-    setTime: "2024-12-15T11:00:00Z",
-    facilityName: "Medanta",
-    providers: [
-      { name: "Pediatrics", isCancelled: false },
-      { name: "Neurology", isCancelled: false },
-    ],
-    authorizedProviders: [{ name: "Pediatrics" }],
-  },
-  {
-    setTime: "2024-11-10T16:30:00Z",
-    facilityName: "AIIMS",
-    providers: [
-      { name: "Ophthalmology", isCancelled: true },
-      { name: "Radiology", isCancelled: false },
-    ],
-    authorizedProviders: [{ name: "Radiology" }],
-  },
-];
+// Sample data matching the API response structure
+const sampleData = {
+  status: true,
+  message: "Schedules fetched Successfully",
+  response: [
+    {
+      _id: "67875a93b4b6f496a279d06a",
+      facilityId: "675bdabe190660df34291b47",
+      address: "Floor No : 4 near, near Phase VIII, Sector 62, Sahibzada Ajit Singh Nagar, Lamba, Punjab 160062, India",
+      facilityName: "FORTIES",
+      scheduledDateTime: "2025-02-22T20:03:00.000Z",
+      noOfProvidersRequired: [
+        {
+          type: "Anesthesiologist",
+          count: 3,
+          isCancelled: false,
+          _id: "67ac7d7b48acafe326f7dc14"
+        },
+        {
+          type: "CRNA",
+          count: 1,
+          isCancelled: false,
+          _id: "67ac7d7b48acafe326f7dc15"
+        }
+      ],
+      assignedProviders: [
+        {
+          providerId: "67a59ac27790b04df3c7f922",
+          providerScheduleId: "67ac7d3b48acafe326f7d4b0",
+          assignedDateTime: "2025-02-22T15:00:00.000Z",
+          providerName: "jatin",
+          providerType: "CRNA",
+          _id: "67ad923a48acafe326f990e0",
+          providerDetails: {
+            providerType: "CRNA"
+          }
+        }
+      ]
+    },
+    {
+      _id: "67920572a59906b64d438ca6",
+      facilityId: "67401d38bf9ff4e5b0cc95f7",
+      address: "Via L. Mercantini, 26, 60019 Senigallia AN, Italy",
+      facilityName: "CITY PARK12",
+      scheduledDateTime: "2025-02-19T15:00:00.000Z",
+      noOfProvidersRequired: [
+        {
+          type: "CRNA",
+          count: 1,
+          isCancelled: false,
+          _id: "67920572a59906b64d438ca7"
+        },
+        {
+          type: "RN PACU/ICU",
+          count: 1,
+          isCancelled: false,
+          _id: "67920572a59906b64d438ca8"
+        }
+      ],
+      assignedProviders: []
+    }
+  ]
+};
 
 const DraggableProvider = ({
   provider,
   isPastDate,
-  authorizedProviders,
+  assignedProviders,
+  providerType,
 }: {
   provider: Provider;
   isPastDate: boolean;
-  authorizedProviders: AuthorizedProvider[];
+  assignedProviders: AssignedProvider[];
+  providerType: string;
 }) => {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "PROVIDER",
@@ -102,21 +114,36 @@ const DraggableProvider = ({
     }),
   }));
 
-  const isAuthorized = authorizedProviders.some(
-    (authProvider) => authProvider.name === provider.name
+  // Create multiple provider slots based on count
+  const slots = Array(provider.count).fill(null);
+
+  // Find assigned providers of this type
+  const assignedOfType = assignedProviders.filter(
+    (ap) => ap.providerType === provider.type
   );
 
   return (
-    <div
-      ref={drag}
-      className={`p-2 border rounded cursor-pointer transition-transform transform ${
-        isDragging ? "opacity-50 scale-95" : "bg-white hover:scale-105"
-      } ${isPastDate ? "cursor-not-allowed" : ""}`}
-    >
-      {isAuthorized ? "(dev) " : ""}
-      {provider.name}
-      {provider.isCancelled ? " (cancelled)" : ""}
-    </div>
+    <>
+      {slots.map((_, index) => {
+        const assignedProvider = assignedOfType[index];
+        return (
+          <div
+            key={`${provider._id}-${index}`}
+            ref={drag}
+            className={`p-2 mb-2 border rounded cursor-pointer transition-transform transform ${
+              isDragging ? "opacity-50 scale-95" : "bg-white hover:scale-105"
+            } ${isPastDate ? "cursor-not-allowed" : ""}`}
+          >
+            {assignedProvider ? (
+              `${assignedProvider.providerName} (${provider.type})`
+            ) : (
+              `Open ${provider.type} Position`
+            )}
+            {provider.isCancelled ? " (cancelled)" : ""}
+          </div>
+        );
+      })}
+    </>
   );
 };
 
@@ -126,14 +153,14 @@ const DroppableCell = ({
   providers,
   moveProvider,
   isPastDate,
-  authorizedProviders,
+  assignedProviders,
 }: {
   facility: string;
   date: string;
   providers: Provider[];
   moveProvider: (facility: string, date: string, provider: Provider) => void;
   isPastDate: boolean;
-  authorizedProviders: AuthorizedProvider[];
+  assignedProviders: AssignedProvider[];
 }) => {
   const [, drop] = useDrop({
     accept: "PROVIDER",
@@ -145,16 +172,17 @@ const DroppableCell = ({
   return (
     <td
       ref={drop}
-      className={`border p-2 min-w-[150px] align-top transition-colors ${
+      className={`border p-2 min-w-[200px] align-top transition-colors ${
         isPastDate ? "bg-gray-300" : "hover:bg-gray-100"
       }`}
     >
-      {providers.map((provider, index) => (
+      {providers.map((provider) => (
         <DraggableProvider
-          key={index}
+          key={provider._id}
           provider={provider}
           isPastDate={isPastDate}
-          authorizedProviders={authorizedProviders}
+          assignedProviders={assignedProviders}
+          providerType={provider.type}
         />
       ))}
     </td>
@@ -162,8 +190,9 @@ const DroppableCell = ({
 };
 
 const AppointmentTable = () => {
-  const [appointments, setAppointments] =
-    useState<Appointment[]>(initialAppointments);
+  const [appointments, setAppointments] = useState<Appointment[]>(
+    sampleData.response
+  );
 
   const moveProvider = (facility: string, date: string, provider: Provider) => {
     setAppointments((prev) => {
@@ -171,11 +200,13 @@ const AppointmentTable = () => {
 
       // Remove provider from previous location
       const updatedAppointments = prev.map((appointment) => {
-        if (appointment.providers.some((p) => p.name === provider.name)) {
+        if (
+          appointment.noOfProvidersRequired.some((p) => p._id === provider._id)
+        ) {
           return {
             ...appointment,
-            providers: appointment.providers.filter(
-              (p) => p.name !== provider.name
+            noOfProvidersRequired: appointment.noOfProvidersRequired.filter(
+              (p) => p._id !== provider._id
             ),
           };
         }
@@ -185,13 +216,13 @@ const AppointmentTable = () => {
       // Add provider to new location
       const finalAppointments = updatedAppointments.map((appointment) => {
         if (
-          new Date(appointment.setTime).toLocaleDateString() === date &&
+          new Date(appointment.scheduledDateTime).toLocaleDateString() === date &&
           appointment.facilityName === facility
         ) {
           providerMoved = true;
           return {
             ...appointment,
-            providers: [...appointment.providers, provider],
+            noOfProvidersRequired: [...appointment.noOfProvidersRequired, provider],
           };
         }
         return appointment;
@@ -199,10 +230,13 @@ const AppointmentTable = () => {
 
       if (!providerMoved) {
         finalAppointments.push({
-          setTime: new Date(date).toISOString(),
+          _id: Math.random().toString(),
+          facilityId: "",
           facilityName: facility,
-          providers: [provider],
-          authorizedProviders: [], // Add an empty array or appropriate value
+          scheduledDateTime: new Date(date).toISOString(),
+          noOfProvidersRequired: [provider],
+          assignedProviders: [],
+          address: "",
         });
       }
 
@@ -212,7 +246,9 @@ const AppointmentTable = () => {
 
   const uniqueDates = Array.from(
     new Set(
-      appointments.map((appt) => new Date(appt.setTime).toLocaleDateString())
+      appointments.map((appt) =>
+        new Date(appt.scheduledDateTime).toLocaleDateString()
+      )
     )
   ).sort((a, b) => new Date(a).getTime() - new Date(b).getTime());
 
@@ -256,19 +292,19 @@ const AppointmentTable = () => {
                     providers={appointments
                       .filter(
                         (appt) =>
-                          new Date(appt.setTime).toLocaleDateString() ===
+                          new Date(appt.scheduledDateTime).toLocaleDateString() ===
                             date && appt.facilityName === facility
                       )
-                      .flatMap((appt) => appt.providers)}
+                      .flatMap((appt) => appt.noOfProvidersRequired)}
                     moveProvider={moveProvider}
                     isPastDate={true}
-                    authorizedProviders={
-                      appointments.find(
+                    assignedProviders={appointments
+                      .filter(
                         (appt) =>
-                          new Date(appt.setTime).toLocaleDateString() ===
+                          new Date(appt.scheduledDateTime).toLocaleDateString() ===
                             date && appt.facilityName === facility
-                      )?.authorizedProviders || []
-                    }
+                      )
+                      .flatMap((appt) => appt.assignedProviders)}
                   />
                 ))}
                 {futureDates.map((date) => (
@@ -279,19 +315,19 @@ const AppointmentTable = () => {
                     providers={appointments
                       .filter(
                         (appt) =>
-                          new Date(appt.setTime).toLocaleDateString() ===
+                          new Date(appt.scheduledDateTime).toLocaleDateString() ===
                             date && appt.facilityName === facility
                       )
-                      .flatMap((appt) => appt.providers)}
+                      .flatMap((appt) => appt.noOfProvidersRequired)}
                     moveProvider={moveProvider}
                     isPastDate={false}
-                    authorizedProviders={
-                      appointments.find(
+                    assignedProviders={appointments
+                      .filter(
                         (appt) =>
-                          new Date(appt.setTime).toLocaleDateString() ===
+                          new Date(appt.scheduledDateTime).toLocaleDateString() ===
                             date && appt.facilityName === facility
-                      )?.authorizedProviders || []
-                    }
+                      )
+                      .flatMap((appt) => appt.assignedProviders)}
                   />
                 ))}
               </tr>
