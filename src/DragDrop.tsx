@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { DndProvider, useDrag, useDrop } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import sampleData from './response.json';
 
 interface Provider {
   type: string;
@@ -9,101 +10,64 @@ interface Provider {
   _id: string;
 }
 
-interface AssignedProvider {
+interface ProviderDetails {
+  providerPermissions: {
+    isOnCall: boolean;
+  };
+  adminSettingPermissions: {
+    isProviderInvoiceApprovals: boolean;
+    isEditedClockEntryAllow: boolean;
+  };
+  providerType?: string;
+  [key: string]: any;
+}
+
+interface ProviderScheduleDetails {
   providerId: string;
   providerName: string;
-  providerType: string;
+  availabilityDate: string;
+  status: string;
+  assignedDateTime: string;
+  [key: string]: any;
+}
+
+interface AssignedProvider {
+  providerId: string;
+  providerScheduleId: string;
+  assignedDateTime: string;
+  providerName: string;
+  providerType?: string;
   _id: string;
-  providerDetails: {
-    providerType: string;
-    [key: string]: any;
-  };
+  providerDetails: ProviderDetails;
+  providerScheduleDetails: ProviderScheduleDetails;
 }
 
 interface Appointment {
   _id: string;
   facilityId: string;
   facilityName: string;
+  address: string;
   scheduledDateTime: string;
   noOfProvidersRequired: Provider[];
   assignedProviders: AssignedProvider[];
-  address: string;
+  roomsAvailable?: number;
+  schedulingNote?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  __v?: number;
 }
 
-// Sample data matching the API response structure
-const sampleData = {
-  status: true,
-  message: "Schedules fetched Successfully",
-  response: [
-    {
-      _id: "67875a93b4b6f496a279d06a",
-      facilityId: "675bdabe190660df34291b47",
-      address: "Floor No : 4 near, near Phase VIII, Sector 62, Sahibzada Ajit Singh Nagar, Lamba, Punjab 160062, India",
-      facilityName: "FORTIES",
-      scheduledDateTime: "2025-02-22T20:03:00.000Z",
-      noOfProvidersRequired: [
-        {
-          type: "Anesthesiologist",
-          count: 3,
-          isCancelled: false,
-          _id: "67ac7d7b48acafe326f7dc14"
-        },
-        {
-          type: "CRNA",
-          count: 1,
-          isCancelled: false,
-          _id: "67ac7d7b48acafe326f7dc15"
-        }
-      ],
-      assignedProviders: [
-        {
-          providerId: "67a59ac27790b04df3c7f922",
-          providerScheduleId: "67ac7d3b48acafe326f7d4b0",
-          assignedDateTime: "2025-02-22T15:00:00.000Z",
-          providerName: "jatin",
-          providerType: "CRNA",
-          _id: "67ad923a48acafe326f990e0",
-          providerDetails: {
-            providerType: "CRNA"
-          }
-        }
-      ]
-    },
-    {
-      _id: "67920572a59906b64d438ca6",
-      facilityId: "67401d38bf9ff4e5b0cc95f7",
-      address: "Via L. Mercantini, 26, 60019 Senigallia AN, Italy",
-      facilityName: "CITY PARK12",
-      scheduledDateTime: "2025-02-19T15:00:00.000Z",
-      noOfProvidersRequired: [
-        {
-          type: "CRNA",
-          count: 1,
-          isCancelled: false,
-          _id: "67920572a59906b64d438ca7"
-        },
-        {
-          type: "RN PACU/ICU",
-          count: 1,
-          isCancelled: false,
-          _id: "67920572a59906b64d438ca8"
-        }
-      ],
-      assignedProviders: []
-    }
-  ]
-};
-
-const DraggableProvider = ({
-  provider,
-  isPastDate,
-  assignedProviders,
-  providerType,
-}: {
+interface DraggableProviderProps {
   provider: Provider;
   isPastDate: boolean;
   assignedProviders: AssignedProvider[];
   providerType: string;
+}
+
+const DraggableProvider: React.FC<DraggableProviderProps> = ({
+  provider,
+  isPastDate,
+  assignedProviders,
 }) => {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "PROVIDER",
@@ -119,7 +83,7 @@ const DraggableProvider = ({
 
   // Find assigned providers of this type
   const assignedOfType = assignedProviders.filter(
-    (ap) => ap.providerType === provider.type
+    (ap) => ap.providerType === provider.type || ap.providerDetails.providerType === provider.type
   );
 
   return (
@@ -147,20 +111,22 @@ const DraggableProvider = ({
   );
 };
 
-const DroppableCell = ({
-  facility,
-  date,
-  providers,
-  moveProvider,
-  isPastDate,
-  assignedProviders,
-}: {
+interface DroppableCellProps {
   facility: string;
   date: string;
   providers: Provider[];
   moveProvider: (facility: string, date: string, provider: Provider) => void;
   isPastDate: boolean;
   assignedProviders: AssignedProvider[];
+}
+
+const DroppableCell: React.FC<DroppableCellProps> = ({
+  facility,
+  date,
+  providers,
+  moveProvider,
+  isPastDate,
+  assignedProviders,
 }) => {
   const [, drop] = useDrop({
     accept: "PROVIDER",
@@ -189,7 +155,7 @@ const DroppableCell = ({
   );
 };
 
-const AppointmentTable = () => {
+const AppointmentTable: React.FC = () => {
   const [appointments, setAppointments] = useState<Appointment[]>(
     sampleData.response
   );

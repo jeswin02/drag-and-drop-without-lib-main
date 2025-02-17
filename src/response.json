@@ -1,0 +1,1283 @@
+{
+    "status": true,
+    "message": "Schedules fetched Successfully",
+    "response": [
+      {
+        "_id": "67875a93b4b6f496a279d06a",
+        "facilityId": "675bdabe190660df34291b47",
+        "address": "Floor No : 4 near, near Phase VIII, Sector 62, Sahibzada Ajit Singh Nagar, Lamba, Punjab 160062, India",
+        "facilityName": "FORTIES",
+        "scheduledDateTime": "2025-02-22T20:03:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "Anesthesiologist",
+            "count": 3,
+            "isCancelled": false,
+            "_id": "67ac7d7b48acafe326f7dc14"
+          },
+          {
+            "type": "CRNA",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67ac7d7b48acafe326f7dc15"
+          }
+        ],
+        "roomsAvailable": 6,
+        "schedulingNote": "21231",
+        "assignedProviders": [
+          {
+            "providerId": "67a59ac27790b04df3c7f922",
+            "providerScheduleId": "67ac7d3b48acafe326f7d4b0",
+            "assignedDateTime": "2025-02-22T15:00:00.000Z",
+            "providerName": "jatin",
+            "_id": "67ad923a48acafe326f990e0",
+            "providerDetails": {
+              "providerPermissions": {
+                "isOnCall": false
+              },
+              "adminSettingPermissions": {
+                "isProviderInvoiceApprovals": false,
+                "isEditedClockEntryAllow": false
+              },
+              "uid": "MEDID1738906306251",
+              "fullName": "jatin",
+              "email": "jatin@yopmail.com",
+              "phoneNumber": "9050603853",
+              "userType": "provider",
+              "permissions": [],
+              "mappedFacilities": [
+                "67986a7db27bfd96a8b8448f",
+                "6791d659fe8f45015a7aeaa0",
+                "678629cf28725ca1e72d6e86",
+                "677bc153c9b2580f43736c1d",
+                "67627793f6731f7a8761bdc1",
+                "676176d4f6731f7a87605f03",
+                "675ff13f91793c862b981ea0",
+                "675bdabe190660df34291b47",
+                "675fde1491793c862b97f6b8",
+                "67593972e1eb98e218ad9015",
+                "674848a49cf41c5aba57f037",
+                "67403472bf9ff4e5b0ccb15f",
+                "67402ea0bf9ff4e5b0ccad2e",
+                "67401d38bf9ff4e5b0cc95f7"
+              ],
+              "providerType": "CRNA",
+              "image": "",
+              "template": "invoice/template/957fedc1-fc6f-4f50-989f-e0d9641753ff1738906303231-216535154.xlsx",
+              "templateName": "1a254388-0532-438b-9460-63b31658b993.xlsx",
+              "payrollCalendar": "https://time-tracker-bucket.s3.us-east-1.amazonaws.com/invoice/payroll/9ffcdc83-d518-4878-90ce-2c8c823f71751736445914461-16113291.pdf",
+              "permissionByType": [],
+              "createdAt": "2025-02-07T05:31:46.258Z",
+              "countryCode": "+91",
+              "id": "67a59ac27790b04df3c7f922"
+            },
+            "providerScheduleDetails": {
+              "providerId": "67a59ac27790b04df3c7f922",
+              "providerName": "jatin",
+              "availabilityNote": "",
+              "availabilityDate": "2025-02-22T05:00:00.000Z",
+              "status": "Confirmation_Sent_Pending_User_Acceptance",
+              "color": "#B6D146",
+              "timeDifferenceWRT_UTC": "-05:00",
+              "timeZone": "America/New_York",
+              "notificationReminderCount": 0,
+              "startTime": "",
+              "endTime": "",
+              "isScheduleCancelled": false,
+              "acceptedSmsSent1": true,
+              "confirmationSmsSend1": true,
+              "providerAcceptanceStatus": null,
+              "createdAt": "2025-02-12T10:51:39.471Z",
+              "assignedDateTime": "2025-02-22T15:00:00.000Z",
+              "facilityId": "675bdabe190660df34291b47",
+              "facilityScheduleId": "67875a93b4b6f496a279d06a",
+              "id": "67ac7d3b48acafe326f7d4b0"
+            }
+          }
+        ],
+        "createdAt": "2025-01-15T06:49:55.175Z",
+        "updatedAt": "2025-02-13T06:33:30.838Z",
+        "__v": 1
+      },
+      {
+        "_id": "67920572a59906b64d438ca6",
+        "facilityId": "67401d38bf9ff4e5b0cc95f7",
+        "address": "Via L. Mercantini, 26, 60019 Senigallia AN, Italy",
+        "facilityName": "CITY PARK12",
+        "scheduledDateTime": "2025-02-19T15:00:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "CRNA",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67920572a59906b64d438ca7"
+          },
+          {
+            "type": "RN PACU/ICU",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67920572a59906b64d438ca8"
+          }
+        ],
+        "roomsAvailable": 2,
+        "schedulingNote": "",
+        "assignedProviders": [],
+        "createdAt": "2025-01-23T09:01:38.106Z",
+        "updatedAt": "2025-01-23T09:01:38.106Z",
+        "__v": 0
+      },
+      {
+        "_id": "67920572a59906b64d438cac",
+        "facilityId": "67401d38bf9ff4e5b0cc95f7",
+        "address": "Via L. Mercantini, 26, 60019 Senigallia AN, Italy",
+        "facilityName": "CITY PARK12",
+        "scheduledDateTime": "2025-02-20T15:00:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "CRNA",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67920572a59906b64d438cad"
+          },
+          {
+            "type": "RN PACU/ICU",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67920572a59906b64d438cae"
+          }
+        ],
+        "roomsAvailable": 2,
+        "schedulingNote": "",
+        "assignedProviders": [],
+        "createdAt": "2025-01-23T09:01:38.141Z",
+        "updatedAt": "2025-02-13T15:21:24.372Z",
+        "__v": 0
+      },
+      {
+        "_id": "67920572a59906b64d438cb2",
+        "facilityId": "67401d38bf9ff4e5b0cc95f7",
+        "address": "Via L. Mercantini, 26, 60019 Senigallia AN, Italy",
+        "facilityName": "CITY PARK12",
+        "scheduledDateTime": "2025-02-21T15:00:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "Anesthesiologist",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67920572a59906b64d438cb3"
+          },
+          {
+            "type": "CRNA",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67920572a59906b64d438cb4"
+          },
+          {
+            "type": "RN",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67920572a59906b64d438cb5"
+          },
+          {
+            "type": "RN PACU/ICU",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67920572a59906b64d438cb6"
+          }
+        ],
+        "roomsAvailable": 9,
+        "schedulingNote": "",
+        "assignedProviders": [
+          {
+            "providerId": "674564520c47cd645e4bc408",
+            "providerScheduleId": "6798e625d9db242ee6010f3f",
+            "assignedDateTime": "2025-02-21T15:00:00.000Z",
+            "providerName": "deekanshu",
+            "providerType": "Anesthesiologist",
+            "_id": "67a345fb370d718639e919bd",
+            "providerDetails": {
+              "providerPermissions": {
+                "isOnCall": false
+              },
+              "adminSettingPermissions": {
+                "isProviderInvoiceApprovals": false,
+                "isEditedClockEntryAllow": false
+              },
+              "uid": "MEDID1732600914938",
+              "fullName": "deekanshu",
+              "email": "deekanshu@yopmail.com",
+              "phoneNumber": "3453454355",
+              "userType": "provider",
+              "permissions": [],
+              "providerType": "Anesthesiologist",
+              "image": "",
+              "template": "invoice/template/0156844e-badb-4cba-b047-94afd3cb2c6b1732600914023-528985986.xlsx",
+              "templateName": "z. 4 Invoice Template - MD - Daily OT. - Template 4 (Avi).xlsx",
+              "payrollCalendar": "https://time-tracker-bucket.s3.us-east-1.amazonaws.com/invoice/payroll/9ffcdc83-d518-4878-90ce-2c8c823f71751736445914461-16113291.pdf",
+              "createdAt": "2024-11-26T06:01:54.941Z",
+              "mappedFacilities": [
+                "67401d38bf9ff4e5b0cc95f7",
+                "675fde1491793c862b97f6b8",
+                "675bdabe190660df34291b47",
+                "67403472bf9ff4e5b0ccb15f",
+                "677bc153c9b2580f43736c1d",
+                "675ff13f91793c862b981ea0",
+                "67402ea0bf9ff4e5b0ccad2e",
+                "67593972e1eb98e218ad9015",
+                "676176d4f6731f7a87605f03",
+                "674848a49cf41c5aba57f037",
+                "67627793f6731f7a8761bdc1",
+                "6791d659fe8f45015a7aeaa0",
+                "678629cf28725ca1e72d6e86",
+                "67986a7db27bfd96a8b8448f"
+              ],
+              "deviceToken": "",
+              "deviceType": "ios",
+              "permissionByType": [],
+              "id": "674564520c47cd645e4bc408"
+            },
+            "providerScheduleDetails": {
+              "acceptedSmsSent1": false,
+              "providerAcceptanceStatus": null,
+              "providerId": "674564520c47cd645e4bc408",
+              "providerName": "deekanshu",
+              "availabilityNote": "",
+              "availabilityDate": "2025-02-21T05:00:00.000Z",
+              "status": "Confirmation_Sent_Pending_User_Acceptance",
+              "color": "#B6D146",
+              "timeDifferenceWRT_UTC": "-05:00",
+              "timeZone": "America/New_York",
+              "notificationReminderCount": 0,
+              "startTime": "",
+              "endTime": "",
+              "isScheduleCancelled": false,
+              "createdAt": "2025-01-28T14:13:57.547Z",
+              "assignedDateTime": "2025-02-21T15:00:00.000Z",
+              "facilityId": "67401d38bf9ff4e5b0cc95f7",
+              "facilityScheduleId": "67920572a59906b64d438cb2",
+              "confirmationSmsSend1": true,
+              "id": "6798e625d9db242ee6010f3f"
+            }
+          }
+        ],
+        "createdAt": "2025-01-23T09:01:38.156Z",
+        "updatedAt": "2025-02-05T11:05:31.265Z",
+        "__v": 0
+      },
+      {
+        "_id": "679797fad46c24f61c56d2ac",
+        "facilityId": "67401d38bf9ff4e5b0cc95f7",
+        "address": "Via L. Mercantini, 26, 60019 Senigallia AN, Italy",
+        "facilityName": "CITY PARK12",
+        "scheduledDateTime": "2025-02-19T04:02:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "Anesthesiologist",
+            "count": 3,
+            "isCancelled": false,
+            "_id": "679797fad46c24f61c56d2ad"
+          },
+          {
+            "type": "CRNA",
+            "count": 3,
+            "isCancelled": false,
+            "_id": "679797fad46c24f61c56d2ae"
+          }
+        ],
+        "roomsAvailable": 8,
+        "schedulingNote": "54656",
+        "assignedProviders": [],
+        "createdAt": "2025-01-27T14:28:10.245Z",
+        "updatedAt": "2025-02-02T18:01:14.544Z",
+        "__v": 0
+      },
+      {
+        "_id": "679863bcb27bfd96a8b806a4",
+        "facilityId": "675bdabe190660df34291b47",
+        "address": "Floor No : 4 near, near Phase VIII, Sector 62, Sahibzada Ajit Singh Nagar, Lamba, Punjab 160062, India",
+        "facilityName": "FORTIES",
+        "scheduledDateTime": "2025-02-16T20:03:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "Anesthesiologist",
+            "count": 3,
+            "isCancelled": false,
+            "_id": "67ac7d7b48acafe326f7dbef"
+          },
+          {
+            "type": "CRNA",
+            "count": 3,
+            "isCancelled": false,
+            "_id": "67ac7d7b48acafe326f7dbf0"
+          }
+        ],
+        "roomsAvailable": 6,
+        "schedulingNote": "21231",
+        "assignedProviders": [
+          {
+            "providerId": "674031fabf9ff4e5b0ccaf7b",
+            "providerScheduleId": "679c6471a6689743b2900315",
+            "assignedDateTime": "2025-02-16T06:01:00.000Z",
+            "providerName": "ron",
+            "providerType": "CRNA",
+            "providerPosition": 2,
+            "_id": "67a9e1eec5e2690baa23ad31",
+            "providerDetails": {
+              "providerPermissions": {
+                "isOnCall": true
+              },
+              "adminSettingPermissions": {
+                "isProviderInvoiceApprovals": false,
+                "isEditedClockEntryAllow": false
+              },
+              "uid": "MEDID1732260346005",
+              "fullName": "ron",
+              "email": "ron@yopmail.com",
+              "phoneNumber": "3453454355",
+              "userType": "provider",
+              "permissions": [],
+              "providerType": "CRNA",
+              "image": "",
+              "template": "invoice/template/d67a3b9f-9553-407b-9f90-4ac433657d811735205053410-831652109.xlsx",
+              "templateName": "Peds-Cardiac_Invoice_Template_-_MD_-_v1.xlsx",
+              "payrollCalendar": "https://time-tracker-bucket.s3.us-east-1.amazonaws.com/invoice/payroll/9ffcdc83-d518-4878-90ce-2c8c823f71751736445914461-16113291.pdf",
+              "createdAt": "2024-11-22T07:25:46.006Z",
+              "deviceToken": "fExRUsIbDUYFl5q-07IIXm:APA91bFqA3OEoO0re7VrpZTdlqGf4ctjUeIii89MV_BIQIbq245dYaT8ci3j8ZTgX0_Ls5eWl2NTug3WGOD5x8QJqvXW9q0gNKX757kYkHTRi_bcsUByACo",
+              "deviceType": "ios",
+              "mappedFacilities": [
+                "67401d38bf9ff4e5b0cc95f7",
+                "67403472bf9ff4e5b0ccb15f",
+                "67402ea0bf9ff4e5b0ccad2e",
+                "674848a49cf41c5aba57f037",
+                "675bdabe190660df34291b47",
+                "67627793f6731f7a8761bdc1",
+                "676176d4f6731f7a87605f03",
+                "675fde1491793c862b97f6b8",
+                "675ff13f91793c862b981ea0",
+                "677bc153c9b2580f43736c1d",
+                "67593972e1eb98e218ad9015",
+                "678629cf28725ca1e72d6e86"
+              ],
+              "permissionByType": [],
+              "id": "674031fabf9ff4e5b0ccaf7b"
+            },
+            "providerScheduleDetails": {
+              "acceptedSmsSent1": false,
+              "confirmationSmsSend1": false,
+              "providerAcceptanceStatus": null,
+              "providerId": "674031fabf9ff4e5b0ccaf7b",
+              "providerName": "ron",
+              "availabilityNote": "",
+              "availabilityDate": "2025-02-16T10:00:00.000Z",
+              "status": "No_Punch_In",
+              "color": "#000",
+              "timeDifferenceWRT_UTC": "-05:00",
+              "timeZone": "America/New_York",
+              "notificationReminderCount": 241,
+              "startTime": "",
+              "endTime": "",
+              "isScheduleCancelled": false,
+              "createdAt": "2025-01-31T05:49:37.946Z",
+              "facilityId": "675bdabe190660df34291b47",
+              "assignedDateTime": "2025-02-16T06:01:00.000Z",
+              "facilityScheduleId": "679863bcb27bfd96a8b806a4",
+              "id": "679c6471a6689743b2900315"
+            }
+          },
+          {
+            "providerId": "67a59ac27790b04df3c7f922",
+            "providerScheduleId": "67ac7d3b48acafe326f7d4b4",
+            "assignedDateTime": "2025-02-16T15:00:00.000Z",
+            "providerName": "jatin",
+            "_id": "67ac7d9b48acafe326f7debd",
+            "providerDetails": {
+              "providerPermissions": {
+                "isOnCall": false
+              },
+              "adminSettingPermissions": {
+                "isProviderInvoiceApprovals": false,
+                "isEditedClockEntryAllow": false
+              },
+              "uid": "MEDID1738906306251",
+              "fullName": "jatin",
+              "email": "jatin@yopmail.com",
+              "phoneNumber": "9050603853",
+              "userType": "provider",
+              "permissions": [],
+              "mappedFacilities": [
+                "67986a7db27bfd96a8b8448f",
+                "6791d659fe8f45015a7aeaa0",
+                "678629cf28725ca1e72d6e86",
+                "677bc153c9b2580f43736c1d",
+                "67627793f6731f7a8761bdc1",
+                "676176d4f6731f7a87605f03",
+                "675ff13f91793c862b981ea0",
+                "675bdabe190660df34291b47",
+                "675fde1491793c862b97f6b8",
+                "67593972e1eb98e218ad9015",
+                "674848a49cf41c5aba57f037",
+                "67403472bf9ff4e5b0ccb15f",
+                "67402ea0bf9ff4e5b0ccad2e",
+                "67401d38bf9ff4e5b0cc95f7"
+              ],
+              "providerType": "CRNA",
+              "image": "",
+              "template": "invoice/template/957fedc1-fc6f-4f50-989f-e0d9641753ff1738906303231-216535154.xlsx",
+              "templateName": "1a254388-0532-438b-9460-63b31658b993.xlsx",
+              "payrollCalendar": "https://time-tracker-bucket.s3.us-east-1.amazonaws.com/invoice/payroll/9ffcdc83-d518-4878-90ce-2c8c823f71751736445914461-16113291.pdf",
+              "permissionByType": [],
+              "createdAt": "2025-02-07T05:31:46.258Z",
+              "countryCode": "+91",
+              "id": "67a59ac27790b04df3c7f922"
+            },
+            "providerScheduleDetails": {
+              "providerId": "67a59ac27790b04df3c7f922",
+              "providerName": "jatin",
+              "availabilityNote": "",
+              "availabilityDate": "2025-02-16T05:00:00.000Z",
+              "status": "No_Punch_In",
+              "color": "#000",
+              "timeDifferenceWRT_UTC": "-05:00",
+              "timeZone": "America/New_York",
+              "notificationReminderCount": 0,
+              "startTime": "",
+              "endTime": "",
+              "isScheduleCancelled": false,
+              "acceptedSmsSent1": true,
+              "confirmationSmsSend1": true,
+              "providerAcceptanceStatus": null,
+              "createdAt": "2025-02-12T10:51:39.483Z",
+              "assignedDateTime": "2025-02-16T15:00:00.000Z",
+              "facilityId": "675bdabe190660df34291b47",
+              "facilityScheduleId": "679863bcb27bfd96a8b806a4",
+              "id": "67ac7d3b48acafe326f7d4b4"
+            }
+          }
+        ],
+        "createdAt": "2025-01-28T04:57:32.961Z",
+        "updatedAt": "2025-02-12T10:53:15.509Z",
+        "__v": 2
+      },
+      {
+        "_id": "67986649b27bfd96a8b8274f",
+        "facilityId": "67402ea0bf9ff4e5b0ccad2e",
+        "address": "Phase 8 ,Industerial Area , Mohlai Pin code 1610070",
+        "facilityName": "Quark City",
+        "scheduledDateTime": "2025-02-16T21:03:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "CRNA",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67986649b27bfd96a8b82750"
+          }
+        ],
+        "roomsAvailable": 1,
+        "schedulingNote": "abc",
+        "assignedProviders": [],
+        "createdAt": "2025-01-28T05:08:25.590Z",
+        "updatedAt": "2025-02-10T11:24:30.883Z",
+        "__v": 0
+      },
+      {
+        "_id": "6798a60fb27bfd96a8ba8deb",
+        "facilityId": "6791d659fe8f45015a7aeaa0",
+        "address": "201-202, Phase 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab 160055, India",
+        "facilityName": "Centurion",
+        "scheduledDateTime": "2025-02-16T06:01:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "CRNA",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "6798a60fb27bfd96a8ba8dec"
+          }
+        ],
+        "roomsAvailable": 1,
+        "schedulingNote": "",
+        "assignedProviders": [],
+        "createdAt": "2025-01-28T09:40:31.418Z",
+        "updatedAt": "2025-02-10T11:24:23.849Z",
+        "__v": 1
+      },
+      {
+        "_id": "679b5af8e8def6c979cdeb3a",
+        "facilityId": "676176d4f6731f7a87605f03",
+        "address": "201-202, Phase 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab 160055, India",
+        "facilityName": "codetribe hospital",
+        "scheduledDateTime": "2025-02-18T16:01:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "Anesthesiologist",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679b5af8e8def6c979cdeb3b"
+          },
+          {
+            "type": "CRNA",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679b5af8e8def6c979cdeb3c"
+          },
+          {
+            "type": "RN",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679b5af8e8def6c979cdeb3d"
+          },
+          {
+            "type": "RN PACU/ICU",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679b5af8e8def6c979cdeb3e"
+          },
+          {
+            "type": "RN PreOp/IV",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679b5af8e8def6c979cdeb3f"
+          },
+          {
+            "type": "Scrub Tech",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679b5af8e8def6c979cdeb40"
+          },
+          {
+            "type": "RN OR",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679b5af8e8def6c979cdeb41"
+          },
+          {
+            "type": "OR Tech",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679b5af8e8def6c979cdeb42"
+          }
+        ],
+        "roomsAvailable": 11,
+        "schedulingNote": "11",
+        "assignedProviders": [],
+        "createdAt": "2025-01-30T10:56:56.395Z",
+        "updatedAt": "2025-02-11T13:25:27.387Z",
+        "__v": 0
+      },
+      {
+        "_id": "679c65de5e87f155bbfda708",
+        "facilityId": "67986a7db27bfd96a8b8448f",
+        "address": "1043, Mohali Stadium Rd, Sector 71, Sahibzada Ajit Singh Nagar, Punjab 160071, India",
+        "facilityName": "Atish Hospital",
+        "scheduledDateTime": "2025-02-18T05:59:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "Anesthesiologist",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679c65de5e87f155bbfda709"
+          },
+          {
+            "type": "CRNA",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679c65de5e87f155bbfda70a"
+          },
+          {
+            "type": "RN",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679c65de5e87f155bbfda70b"
+          },
+          {
+            "type": "RN PACU/ICU",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679c65de5e87f155bbfda70c"
+          },
+          {
+            "type": "RN PreOp/IV",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679c65de5e87f155bbfda70d"
+          },
+          {
+            "type": "RN OR",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679c65de5e87f155bbfda70e"
+          },
+          {
+            "type": "OR Tech",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679c65de5e87f155bbfda70f"
+          },
+          {
+            "type": "Scrub Tech",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679c65de5e87f155bbfda710"
+          },
+          {
+            "type": "X-Ray Tech",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679c65de5e87f155bbfda711"
+          },
+          {
+            "type": "Anesthesia Tech",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679c65de5e87f155bbfda712"
+          },
+          {
+            "type": "MD",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679c65de5e87f155bbfda713"
+          },
+          {
+            "type": "other",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679c65de5e87f155bbfda714"
+          }
+        ],
+        "roomsAvailable": 1,
+        "schedulingNote": "s",
+        "assignedProviders": [],
+        "createdAt": "2025-01-31T05:55:42.520Z",
+        "updatedAt": "2025-01-31T05:55:42.520Z",
+        "__v": 0
+      },
+      {
+        "_id": "679c65de5e87f155bbfda718",
+        "facilityId": "67986a7db27bfd96a8b8448f",
+        "address": "1043, Mohali Stadium Rd, Sector 71, Sahibzada Ajit Singh Nagar, Punjab 160071, India",
+        "facilityName": "Atish Hospital",
+        "scheduledDateTime": "2025-02-19T05:59:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "MA",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "679c65de5e87f155bbfda719"
+          }
+        ],
+        "roomsAvailable": 1,
+        "schedulingNote": "1",
+        "assignedProviders": [],
+        "createdAt": "2025-01-31T05:55:42.545Z",
+        "updatedAt": "2025-01-31T05:55:42.545Z",
+        "__v": 0
+      },
+      {
+        "_id": "67a327bf370d718639e7986d",
+        "facilityId": "675bdabe190660df34291b47",
+        "address": "Floor No : 4 near, near Phase VIII, Sector 62, Sahibzada Ajit Singh Nagar, Lamba, Punjab 160062, India",
+        "facilityName": "FORTIES",
+        "scheduledDateTime": "2025-02-20T20:03:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "Anesthesiologist",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67ac7d7b48acafe326f7dc07"
+          },
+          {
+            "type": "CRNA",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67ac7d7b48acafe326f7dc08"
+          },
+          {
+            "type": "RN OR",
+            "count": 2,
+            "isCancelled": false,
+            "_id": "67ac7d7b48acafe326f7dc09"
+          }
+        ],
+        "roomsAvailable": 6,
+        "schedulingNote": "21231",
+        "assignedProviders": [
+          {
+            "providerId": "670fba89df1699c0ec6ad17d",
+            "providerScheduleId": "679b7f3ae8def6c979d044d9",
+            "assignedDateTime": "2025-02-20T15:00:00.000Z",
+            "providerName": "moris",
+            "providerType": "CRNA",
+            "providerPosition": 0,
+            "_id": "67ae0df4349ddaee8c51d001",
+            "providerDetails": {
+              "providerPermissions": {
+                "isOnCall": false
+              },
+              "adminSettingPermissions": {
+                "isProviderInvoiceApprovals": false,
+                "isEditedClockEntryAllow": false
+              },
+              "uid": "MEDID1729084041754",
+              "fullName": "moris",
+              "email": "moris@yopmail.com",
+              "phoneNumber": "4545435545",
+              "userType": "provider",
+              "permissions": [],
+              "mappedFacilities": [
+                "66b204db1cfaf59b3244ef3b",
+                "66617cea385d1e010dfc10d0",
+                "66608335385d1e010dfb5688",
+                "667d3f980259f80d563f8aee",
+                "6675698f18871e3371417b9b",
+                "668e6d38fa66e70e0eabc3fd",
+                "6661bc86627e5c5de2fa7e53",
+                "66b9b0e733ec305285154f85",
+                "66b2043b1cfaf59b3244e6c6",
+                "6661bcbd627e5c5de2fa7e64",
+                "667d0e7936555c04dc11e68f",
+                "66a08bc5db22dcaab150d6fa",
+                "6662ad4fc62c7fa2655ae9c1",
+                "66608372385d1e010dfb5690",
+                "666082b2385d1e010dfb5667",
+                "66daf7bbe3b513f1d52bb7f4",
+                "667568c918871e3371417b84",
+                "666a844d8117464e27b28139",
+                "6666cf0d6ef925f2c161bdfb",
+                "6662a0c4c62c7fa2655ae189",
+                "667d3d8b0259f80d563f8a86",
+                "66b59fbf33ec305285119570",
+                "667bf1a3634ddebbdcd17606",
+                "66b9b38833ec30528515557f",
+                "667d5111506bfe0fe4c59869",
+                "67401d38bf9ff4e5b0cc95f7",
+                "67403472bf9ff4e5b0ccb15f",
+                "67402ea0bf9ff4e5b0ccad2e",
+                "674848a49cf41c5aba57f037",
+                "67593972e1eb98e218ad9015",
+                "675bdabe190660df34291b47",
+                "675fde1491793c862b97f6b8",
+                "677bc153c9b2580f43736c1d",
+                "675ff13f91793c862b981ea0",
+                "676176d4f6731f7a87605f03",
+                "67627793f6731f7a8761bdc1"
+              ],
+              "providerType": "CRNA",
+              "image": "",
+              "template": "invoice/template/e232877c-3e53-41f2-8125-31bbbab90ef91729084040910-651842579.xlsx",
+              "templateName": "z. 4 Invoice Template - MD - Daily OT. - Template 4 (Avi).xlsx",
+              "payrollCalendar": "https://time-tracker-bucket.s3.us-east-1.amazonaws.com/invoice/payroll/9ffcdc83-d518-4878-90ce-2c8c823f71751736445914461-16113291.pdf",
+              "createdAt": "2024-10-16T13:07:21.757Z",
+              "deviceToken": "",
+              "deviceType": "ios",
+              "permissionByType": [],
+              "id": "670fba89df1699c0ec6ad17d"
+            },
+            "providerScheduleDetails": {
+              "acceptedSmsSent1": false,
+              "confirmationSmsSend1": false,
+              "providerAcceptanceStatus": null,
+              "providerId": "670fba89df1699c0ec6ad17d",
+              "providerName": "moris",
+              "availabilityNote": "",
+              "availabilityDate": "2025-02-20T05:00:00.000Z",
+              "status": "Location_Assigned_Pending_User_Acceptance",
+              "color": "#FFAB07",
+              "timeDifferenceWRT_UTC": "-05:00",
+              "timeZone": "America/New_York",
+              "notificationReminderCount": 0,
+              "startTime": "",
+              "endTime": "",
+              "isScheduleCancelled": false,
+              "createdAt": "2025-01-30T13:31:38.746Z",
+              "assignedDateTime": "2025-02-20T15:00:00.000Z",
+              "facilityId": "675bdabe190660df34291b47",
+              "facilityScheduleId": "67a327bf370d718639e7986d",
+              "id": "679b7f3ae8def6c979d044d9"
+            }
+          }
+        ],
+        "createdAt": "2025-02-05T08:56:31.057Z",
+        "updatedAt": "2025-02-13T15:21:24.377Z",
+        "__v": 1
+      },
+      {
+        "_id": "67a33ac8370d718639e8d73e",
+        "facilityId": "67986a7db27bfd96a8b8448f",
+        "address": "1043, Mohali Stadium Rd, Sector 71, Sahibzada Ajit Singh Nagar, Punjab 160071, India",
+        "facilityName": "Atish Hospital",
+        "scheduledDateTime": "2025-02-20T06:59:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "MA",
+            "count": 2,
+            "isCancelled": true,
+            "_id": "67a45fb3bc8ee5fb68533116"
+          }
+        ],
+        "roomsAvailable": 1,
+        "schedulingNote": "tester",
+        "assignedProviders": [],
+        "createdAt": "2025-02-05T10:17:44.648Z",
+        "updatedAt": "2025-02-13T13:22:38.899Z",
+        "__v": 1
+      },
+      {
+        "_id": "67a5cdebc5e2690baa20d3db",
+        "facilityId": "67403472bf9ff4e5b0ccb15f",
+        "address": "201-202, Phase 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab 160055, India",
+        "facilityName": "IGGMS",
+        "scheduledDateTime": "2025-02-21T04:50:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "RN PACU/ICU",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67a5cdebc5e2690baa20d3dc"
+          },
+          {
+            "type": "RN OR",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67a5cdebc5e2690baa20d3dd"
+          }
+        ],
+        "roomsAvailable": 3,
+        "schedulingNote": "",
+        "assignedProviders": [],
+        "createdAt": "2025-02-07T09:10:03.901Z",
+        "updatedAt": "2025-02-07T09:10:03.901Z",
+        "__v": 0
+      },
+      {
+        "_id": "67aafc5cc5e2690baa247dd4",
+        "facilityId": "67401d38bf9ff4e5b0cc95f7",
+        "address": "Via L. Mercantini, 26, 60019 Senigallia AN, Italy",
+        "facilityName": "CITY PARK12",
+        "scheduledDateTime": "2025-02-22T08:00:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "CRNA",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67aafc5cc5e2690baa247dd5"
+          }
+        ],
+        "roomsAvailable": 4,
+        "schedulingNote": "",
+        "assignedProviders": [
+          {
+            "providerId": "67727cb089f9578d66289773",
+            "providerScheduleId": "67aafc14c5e2690baa24738e",
+            "assignedDateTime": "2025-02-22T16:00:00.000Z",
+            "providerName": "dev",
+            "_id": "67aafc6cc5e2690baa248224",
+            "providerDetails": {
+              "providerPermissions": {
+                "isOnCall": true
+              },
+              "adminSettingPermissions": {
+                "isProviderInvoiceApprovals": false,
+                "isEditedClockEntryAllow": false
+              },
+              "uid": "MEDID1735556272821",
+              "fullName": "dev",
+              "email": "dev@yopmail.com",
+              "phoneNumber": "9050603853",
+              "userType": "provider",
+              "permissions": [],
+              "mappedFacilities": [
+                "67401d38bf9ff4e5b0cc95f7",
+                "675bdabe190660df34291b47",
+                "67403472bf9ff4e5b0ccb15f",
+                "674848a49cf41c5aba57f037",
+                "67402ea0bf9ff4e5b0ccad2e",
+                "676176d4f6731f7a87605f03",
+                "675fde1491793c862b97f6b8",
+                "677bc153c9b2580f43736c1d",
+                "675ff13f91793c862b981ea0",
+                "67593972e1eb98e218ad9015",
+                "67627793f6731f7a8761bdc1",
+                "678629cf28725ca1e72d6e86",
+                "6791d659fe8f45015a7aeaa0"
+              ],
+              "providerType": "CRNA",
+              "image": "",
+              "template": "invoice/template/c4db5512-ab46-4d05-81b2-4693c671c2911737624334451-124963553.xlsx",
+              "templateName": "Peds-Cardiac_Invoice_Template_-_MD_-_v1 (2).xlsx",
+              "payrollCalendar": "https://time-tracker-bucket.s3.us-east-1.amazonaws.com/invoice/payroll/9ffcdc83-d518-4878-90ce-2c8c823f71751736445914461-16113291.pdf",
+              "permissionByType": [],
+              "createdAt": "2024-12-30T10:57:52.824Z",
+              "deviceToken": "f3QqtuSaVEa-rdJYnggleJ:APA91bHkXIpvIJthG7l4c78VDH4l4LjtPFLLMLs6moltRkNp5ekepuZsSToQqktHEyRgi7KPv4RWDzQobWvPNxSmb1hBR9BxDArMDBSpdKTTzadYQliLiBM",
+              "deviceType": "ios",
+              "countryCode": "+91",
+              "id": "67727cb089f9578d66289773"
+            },
+            "providerScheduleDetails": {
+              "acceptedSmsSent1": false,
+              "providerAcceptanceStatus": null,
+              "providerId": "67727cb089f9578d66289773",
+              "providerName": "dev",
+              "availabilityNote": "abc",
+              "availabilityDate": "2025-02-22T05:00:00.000Z",
+              "status": "Provider_Accepted_Location",
+              "color": "#27D507",
+              "timeDifferenceWRT_UTC": "-05:00",
+              "timeZone": "EST",
+              "notificationReminderCount": 0,
+              "isScheduleCancelled": false,
+              "smsSent1": false,
+              "createdAt": "2025-02-11T07:28:20.785Z",
+              "assignedDateTime": "2025-02-22T16:00:00.000Z",
+              "facilityId": "67401d38bf9ff4e5b0cc95f7",
+              "facilityScheduleId": "67aafc5cc5e2690baa247dd4",
+              "confirmationSmsSend1": true,
+              "id": "67aafc14c5e2690baa24738e"
+            }
+          }
+        ],
+        "createdAt": "2025-02-11T07:29:32.209Z",
+        "updatedAt": "2025-02-11T07:29:48.483Z",
+        "__v": 0
+      },
+      {
+        "_id": "67ac44990f2876013f8be450",
+        "facilityId": "67986a7db27bfd96a8b8448f",
+        "address": "1043, Mohali Stadium Rd, Sector 71, Sahibzada Ajit Singh Nagar, Punjab 160071, India",
+        "facilityName": "Atish Hospital",
+        "scheduledDateTime": "2025-02-17T06:00:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "MA",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67ac44990f2876013f8be451"
+          }
+        ],
+        "roomsAvailable": 1,
+        "schedulingNote": "1",
+        "assignedProviders": [],
+        "createdAt": "2025-02-12T06:50:01.377Z",
+        "updatedAt": "2025-02-12T06:50:01.377Z",
+        "__v": 0
+      },
+      {
+        "_id": "67ac7d7b48acafe326f7dbf4",
+        "facilityId": "675bdabe190660df34291b47",
+        "address": "Floor No : 4 near, near Phase VIII, Sector 62, Sahibzada Ajit Singh Nagar, Lamba, Punjab 160062, India",
+        "facilityName": "FORTIES",
+        "scheduledDateTime": "2025-02-17T20:03:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "Anesthesiologist",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67ac7d7b48acafe326f7dbf5"
+          },
+          {
+            "type": "CRNA",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67ac7d7b48acafe326f7dbf6"
+          }
+        ],
+        "roomsAvailable": 6,
+        "schedulingNote": "21231",
+        "assignedProviders": [
+          {
+            "providerId": "67a59ac27790b04df3c7f922",
+            "providerScheduleId": "67ac7d3b48acafe326f7d49c",
+            "assignedDateTime": "2025-02-17T15:00:00.000Z",
+            "providerName": "jatin",
+            "_id": "67ac7dad48acafe326f7df7a",
+            "providerDetails": {
+              "providerPermissions": {
+                "isOnCall": false
+              },
+              "adminSettingPermissions": {
+                "isProviderInvoiceApprovals": false,
+                "isEditedClockEntryAllow": false
+              },
+              "uid": "MEDID1738906306251",
+              "fullName": "jatin",
+              "email": "jatin@yopmail.com",
+              "phoneNumber": "9050603853",
+              "userType": "provider",
+              "permissions": [],
+              "mappedFacilities": [
+                "67986a7db27bfd96a8b8448f",
+                "6791d659fe8f45015a7aeaa0",
+                "678629cf28725ca1e72d6e86",
+                "677bc153c9b2580f43736c1d",
+                "67627793f6731f7a8761bdc1",
+                "676176d4f6731f7a87605f03",
+                "675ff13f91793c862b981ea0",
+                "675bdabe190660df34291b47",
+                "675fde1491793c862b97f6b8",
+                "67593972e1eb98e218ad9015",
+                "674848a49cf41c5aba57f037",
+                "67403472bf9ff4e5b0ccb15f",
+                "67402ea0bf9ff4e5b0ccad2e",
+                "67401d38bf9ff4e5b0cc95f7"
+              ],
+              "providerType": "CRNA",
+              "image": "",
+              "template": "invoice/template/957fedc1-fc6f-4f50-989f-e0d9641753ff1738906303231-216535154.xlsx",
+              "templateName": "1a254388-0532-438b-9460-63b31658b993.xlsx",
+              "payrollCalendar": "https://time-tracker-bucket.s3.us-east-1.amazonaws.com/invoice/payroll/9ffcdc83-d518-4878-90ce-2c8c823f71751736445914461-16113291.pdf",
+              "permissionByType": [],
+              "createdAt": "2025-02-07T05:31:46.258Z",
+              "countryCode": "+91",
+              "id": "67a59ac27790b04df3c7f922"
+            },
+            "providerScheduleDetails": {
+              "providerId": "67a59ac27790b04df3c7f922",
+              "providerName": "jatin",
+              "availabilityNote": "",
+              "availabilityDate": "2025-02-17T05:00:00.000Z",
+              "status": "Provider_Accepted_Location",
+              "color": "#27D507",
+              "timeDifferenceWRT_UTC": "-05:00",
+              "timeZone": "America/New_York",
+              "notificationReminderCount": 0,
+              "startTime": "",
+              "endTime": "",
+              "isScheduleCancelled": false,
+              "acceptedSmsSent1": true,
+              "confirmationSmsSend1": true,
+              "providerAcceptanceStatus": null,
+              "createdAt": "2025-02-12T10:51:39.392Z",
+              "assignedDateTime": "2025-02-17T15:00:00.000Z",
+              "facilityId": "675bdabe190660df34291b47",
+              "facilityScheduleId": "67ac7d7b48acafe326f7dbf4",
+              "id": "67ac7d3b48acafe326f7d49c"
+            }
+          }
+        ],
+        "createdAt": "2025-02-12T10:52:43.063Z",
+        "updatedAt": "2025-02-12T10:53:33.585Z",
+        "__v": 0
+      },
+      {
+        "_id": "67ac7d7b48acafe326f7dbfa",
+        "facilityId": "675bdabe190660df34291b47",
+        "address": "Floor No : 4 near, near Phase VIII, Sector 62, Sahibzada Ajit Singh Nagar, Lamba, Punjab 160062, India",
+        "facilityName": "FORTIES",
+        "scheduledDateTime": "2025-02-18T20:03:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "Anesthesiologist",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67ac7d7b48acafe326f7dbfb"
+          },
+          {
+            "type": "CRNA",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67ac7d7b48acafe326f7dbfc"
+          }
+        ],
+        "roomsAvailable": 6,
+        "schedulingNote": "21231",
+        "assignedProviders": [],
+        "createdAt": "2025-02-12T10:52:43.075Z",
+        "updatedAt": "2025-02-14T11:48:48.195Z",
+        "__v": 0
+      },
+      {
+        "_id": "67ac7d7b48acafe326f7dc00",
+        "facilityId": "675bdabe190660df34291b47",
+        "address": "Floor No : 4 near, near Phase VIII, Sector 62, Sahibzada Ajit Singh Nagar, Lamba, Punjab 160062, India",
+        "facilityName": "FORTIES",
+        "scheduledDateTime": "2025-02-19T20:03:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "Anesthesiologist",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67ac7d7b48acafe326f7dc01"
+          },
+          {
+            "type": "CRNA",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67ac7d7b48acafe326f7dc02"
+          }
+        ],
+        "roomsAvailable": 6,
+        "schedulingNote": "21231",
+        "assignedProviders": [
+          {
+            "providerId": "67a59ac27790b04df3c7f922",
+            "providerScheduleId": "67ac7d3b48acafe326f7d4a4",
+            "assignedDateTime": "2025-02-19T15:00:00.000Z",
+            "providerName": "jatin",
+            "providerType": "CRNA",
+            "providerPosition": 0,
+            "_id": "67af2da0e860168f872feba5",
+            "providerDetails": {
+              "providerPermissions": {
+                "isOnCall": false
+              },
+              "adminSettingPermissions": {
+                "isProviderInvoiceApprovals": false,
+                "isEditedClockEntryAllow": false
+              },
+              "uid": "MEDID1738906306251",
+              "fullName": "jatin",
+              "email": "jatin@yopmail.com",
+              "phoneNumber": "9050603853",
+              "userType": "provider",
+              "permissions": [],
+              "mappedFacilities": [
+                "67986a7db27bfd96a8b8448f",
+                "6791d659fe8f45015a7aeaa0",
+                "678629cf28725ca1e72d6e86",
+                "677bc153c9b2580f43736c1d",
+                "67627793f6731f7a8761bdc1",
+                "676176d4f6731f7a87605f03",
+                "675ff13f91793c862b981ea0",
+                "675bdabe190660df34291b47",
+                "675fde1491793c862b97f6b8",
+                "67593972e1eb98e218ad9015",
+                "674848a49cf41c5aba57f037",
+                "67403472bf9ff4e5b0ccb15f",
+                "67402ea0bf9ff4e5b0ccad2e",
+                "67401d38bf9ff4e5b0cc95f7"
+              ],
+              "providerType": "CRNA",
+              "image": "",
+              "template": "invoice/template/957fedc1-fc6f-4f50-989f-e0d9641753ff1738906303231-216535154.xlsx",
+              "templateName": "1a254388-0532-438b-9460-63b31658b993.xlsx",
+              "payrollCalendar": "https://time-tracker-bucket.s3.us-east-1.amazonaws.com/invoice/payroll/9ffcdc83-d518-4878-90ce-2c8c823f71751736445914461-16113291.pdf",
+              "permissionByType": [],
+              "createdAt": "2025-02-07T05:31:46.258Z",
+              "countryCode": "+91",
+              "id": "67a59ac27790b04df3c7f922"
+            },
+            "providerScheduleDetails": {
+              "providerId": "67a59ac27790b04df3c7f922",
+              "providerName": "jatin",
+              "availabilityNote": "",
+              "availabilityDate": "2025-02-19T05:00:00.000Z",
+              "status": "Confirmation_Sent_Pending_User_Acceptance",
+              "color": "#36a7f7",
+              "timeDifferenceWRT_UTC": "-05:00",
+              "timeZone": "America/New_York",
+              "notificationReminderCount": 0,
+              "startTime": "",
+              "endTime": "",
+              "isScheduleCancelled": false,
+              "acceptedSmsSent1": true,
+              "confirmationSmsSend1": true,
+              "providerAcceptanceStatus": null,
+              "createdAt": "2025-02-12T10:51:39.433Z",
+              "assignedDateTime": "2025-02-19T15:00:00.000Z",
+              "facilityId": "675bdabe190660df34291b47",
+              "facilityScheduleId": "67ac7d7b48acafe326f7dc00",
+              "id": "67ac7d3b48acafe326f7d4a4"
+            }
+          }
+        ],
+        "createdAt": "2025-02-12T10:52:43.090Z",
+        "updatedAt": "2025-02-14T11:48:48.200Z",
+        "__v": 0
+      },
+      {
+        "_id": "67ac7d7b48acafe326f7dc0d",
+        "facilityId": "675bdabe190660df34291b47",
+        "address": "Floor No : 4 near, near Phase VIII, Sector 62, Sahibzada Ajit Singh Nagar, Lamba, Punjab 160062, India",
+        "facilityName": "FORTIES",
+        "scheduledDateTime": "2025-02-21T20:03:00.000Z",
+        "noOfProvidersRequired": [
+          {
+            "type": "Anesthesiologist",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67ac7d7b48acafe326f7dc0e"
+          },
+          {
+            "type": "CRNA",
+            "count": 1,
+            "isCancelled": false,
+            "_id": "67ac7d7b48acafe326f7dc0f"
+          }
+        ],
+        "roomsAvailable": 6,
+        "schedulingNote": "21231",
+        "assignedProviders": [
+          {
+            "providerId": "67a59ac27790b04df3c7f922",
+            "providerScheduleId": "67ac7d3b48acafe326f7d4ac",
+            "assignedDateTime": "2025-02-21T15:00:00.000Z",
+            "providerName": "jatin",
+            "_id": "67ad924e48acafe326f993bf",
+            "providerDetails": {
+              "providerPermissions": {
+                "isOnCall": false
+              },
+              "adminSettingPermissions": {
+                "isProviderInvoiceApprovals": false,
+                "isEditedClockEntryAllow": false
+              },
+              "uid": "MEDID1738906306251",
+              "fullName": "jatin",
+              "email": "jatin@yopmail.com",
+              "phoneNumber": "9050603853",
+              "userType": "provider",
+              "permissions": [],
+              "mappedFacilities": [
+                "67986a7db27bfd96a8b8448f",
+                "6791d659fe8f45015a7aeaa0",
+                "678629cf28725ca1e72d6e86",
+                "677bc153c9b2580f43736c1d",
+                "67627793f6731f7a8761bdc1",
+                "676176d4f6731f7a87605f03",
+                "675ff13f91793c862b981ea0",
+                "675bdabe190660df34291b47",
+                "675fde1491793c862b97f6b8",
+                "67593972e1eb98e218ad9015",
+                "674848a49cf41c5aba57f037",
+                "67403472bf9ff4e5b0ccb15f",
+                "67402ea0bf9ff4e5b0ccad2e",
+                "67401d38bf9ff4e5b0cc95f7"
+              ],
+              "providerType": "CRNA",
+              "image": "",
+              "template": "invoice/template/957fedc1-fc6f-4f50-989f-e0d9641753ff1738906303231-216535154.xlsx",
+              "templateName": "1a254388-0532-438b-9460-63b31658b993.xlsx",
+              "payrollCalendar": "https://time-tracker-bucket.s3.us-east-1.amazonaws.com/invoice/payroll/9ffcdc83-d518-4878-90ce-2c8c823f71751736445914461-16113291.pdf",
+              "permissionByType": [],
+              "createdAt": "2025-02-07T05:31:46.258Z",
+              "countryCode": "+91",
+              "id": "67a59ac27790b04df3c7f922"
+            },
+            "providerScheduleDetails": {
+              "providerId": "67a59ac27790b04df3c7f922",
+              "providerName": "jatin",
+              "availabilityNote": "",
+              "availabilityDate": "2025-02-21T05:00:00.000Z",
+              "status": "Confirmation_Sent_Pending_User_Acceptance",
+              "color": "#B6D146",
+              "timeDifferenceWRT_UTC": "-05:00",
+              "timeZone": "America/New_York",
+              "notificationReminderCount": 0,
+              "startTime": "",
+              "endTime": "",
+              "isScheduleCancelled": false,
+              "acceptedSmsSent1": true,
+              "confirmationSmsSend1": true,
+              "providerAcceptanceStatus": null,
+              "createdAt": "2025-02-12T10:51:39.458Z",
+              "assignedDateTime": "2025-02-21T15:00:00.000Z",
+              "facilityId": "675bdabe190660df34291b47",
+              "facilityScheduleId": "67ac7d7b48acafe326f7dc0d",
+              "id": "67ac7d3b48acafe326f7d4ac"
+            }
+          }
+        ],
+        "createdAt": "2025-02-12T10:52:43.120Z",
+        "updatedAt": "2025-02-13T06:33:50.658Z",
+        "__v": 0
+      }
+    ]
+  }
